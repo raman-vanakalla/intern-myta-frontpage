@@ -87,6 +87,15 @@
       margin-left: 50px;
       color: white;
     }
+    .chapter
+    {
+       color: white;
+       margin-left: 40px;
+    }
+    .no
+    {
+      margin-left: -20px;
+    }
 	</style>
 </head>
 <body>
@@ -339,17 +348,50 @@ function subsubs(subject)
           {
              va.subSubjectList.map(function(v)
              {
-                var s='<p onclick="function(){console.log("hello");}""><b >'+v.name+'</b></p>';
+                var s='<p ><b class="subsub" >'+v.name+'</b></p>';
+                subsub=v.name;
                 $('.side').append(s);
+                $('.side').append('<div ><ul id="'+v.name+'" class="chapter"></ul></div>');
+                $('.subsub').on('click',{subsub:v.name},expand);
              });
           }
       });
     }
    });
 }
-function expand(e)
+function expand(event)
 {
-  console.log(e);
+    console.log(grade);
+    console.log(sub);
+    console.log(subsub);
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+    q=event.data.subsub;
+    data.data.list.map(function(val)
+   {
+      if(val.name==grade)
+      {
+      val.subjectList.map(function(va){
+          if(va.name==sub)
+          {
+             va.subSubjectList.map(function(v)
+             {
+                if(v.name==q)
+                {
+                    if(v.chapterList.length==0)
+                    {
+                       $('#'+q).prepend('<p class="no">No Chapters Found!</p>');
+                    }
+                    v.chapterList.map(function(c){
+                        $('#'+q).append('<li>'+c.name+'</li>');
+                    });
+                }
+             });
+          }
+      });
+    }
+   });
+    
 }
 load();
 

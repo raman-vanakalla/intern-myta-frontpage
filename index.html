@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>MYTA</title>
-	<meta name="viewport" , initial-scale=1">
+	<meta name="viewport" , initial-scale="1">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,104 +10,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
 
-    <style type="text/css">
-		.side
-		{
-      z-index: 1;
-      background-color:#1B3B50;
-      height: 600px;
-		}
-    .main
-    {
-      background-color:#173446;
-    }
-    .top
-    {
-      height: 100px;  
-    }
-    .button
-    {
-      height:30px;
-      width: 16.38%;
-      background:#CFCCC8;
-      display:inline-block;
-      font-size:12.5px;
-      color: #2074A0;
-      text-decoration:none;
-    }
-    .button:hover
-    {  
-      background-color: #2074A0;
-      color: white;
-    }
-    .parallelogram
-    {
-      transform: skew(40deg);
-    }
-    .skew-fix
-    {
-      display:inline-block;
-      transform: skew(-40deg);
-
-      padding: 7.5px 0px 0px 50px;
-    }
-    nav
-    {
-      position: relative;
-      left: -25px;
-      margin-right: 0px;
-    }
-    .drop
-    {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 20px;
-      border: none;
-      background-color:#173446;
-      color: white;
-      margin:40px 0px 40px 100px;
-    }
-    body
-    {
-      width: 1520px;
-    }
-    h1
-    {
-      color: white;
-      margin:100px 0px 100px 0px;
-      text-align: center;
-    }
-    h4
-    {
-      color: white;
-      text-align: center;
-    }
-    p
-    {
-      margin-left: 50px;
-      color: white;
-    }
-    .chapter
-    {
-       color: white;
-       margin-left: 40px;
-    }
-    .no
-    {
-      margin-left: -20px;
-    }
-	</style>
 </head>
 <body>
     
     <div class="row">
-    	<div class="col-lg-3 side">
+    	<div class="col-lg-3 col-xs-0 side">
        <h1><b>LOGO</b></h1> 
        <h4><b>CONTENTS</b></h4>
+       <nav class="navbar navbar-inverse">
+         <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                        
+              </button>
+            </div>
+           <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav ">
+              <li class="active"><a href="#">Home</a></li> 
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+            </ul>  
+           </div>
+     </div>
+</nav>
       </div>
     	<div class="col-lg-9">
           <div class="row main">
-            <div class="col-lg-6 top"></div>
+            <div class="col-lg-6 top">
+              
+            </div>
             <div class="col-lg-3 top">
                <select class="drop grade" onchange="setsubs(options[this.selectedIndex].value)" >
                  <option value="select" >SELECT GRADE</option>
@@ -119,311 +54,28 @@
                </select>
             </div>
     	  	</div>
-    		  <nav class="navbar navbar-inverse" >
-            <div class="container-fluid">
-               <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                     <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>                        
-                  </button>
-                 <a class="navbar-brand" href="#">WebSiteName</a>
-              </div>
-              <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                  <li>
-                    <a class="button parallelogram" href="#">
-                      <span class="skew-fix"><b>NOTES</b></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="button parallelogram" href="#">
-                      <span class="skew-fix"><b>LAQ</b></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="button parallelogram" href="#">
-                      <span class="skew-fix"><b>SAQ</b></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="button parallelogram" href="#">
-                      <span class="skew-fix"><b>VSAQ</b></span>
-                    </a>   
-                  </li>
-                  <li>
-                     <a class="button parallelogram" href="#">
-                       <span class="skew-fix"><b>VBQ</b></span>
-                     </a>
-                  </li>
-                  <li>
-                    <a class="button parallelogram" href="#">
-                      <span class="skew-fix"><b>NCERT QUESTIONS</b></span>
-                   </a>   
-                  </li>
-                </ul>
-              </div>
+    		  <nav >
+              <a class="button parallelogram" href="#">
+                  <span class="skew-fix"><b>NOTES</b></span>
+              </a>
+              <a class="button parallelogram" href="#">
+                  <span class="skew-fix"><b>LAQ</b></span>
+              </a>
+              <a class="button parallelogram" href="#">
+                  <span class="skew-fix"><b>SAQ</b></span>
+              </a>
+              <a class="button parallelogram" href="#">
+                  <span class="skew-fix"><b>VSAQ</b></span>
+              </a>
+              <a class="button parallelogram" href="#">
+                  <span class="skew-fix"><b>VBQ</b></span>
+              </a>
+              <a class="button parallelogram" href="#">
+                  <span class="skew-fix"><b>NCERT QUESTIONS</b></span>
+              </a>
           </nav>
     	</div>
     </div>
-<script type="text/javascript">
-var data=  {
-   "status":0,
-   "data":
-   {
-        "childOrderingArray":[0,1,2],
-        "list":
-            [
-              {
-                "isEnabled":true,
-                "childOrderingArray":[0,1],
-                "subjectList":
-                    [
-                      {
-                        "isEnabled":true,
-                        "childOrderingArray":[0],
-                        "subSubjectList":
-                          [
-                            {
-                              "isEnabled":true,
-                              "childOrderingArray":[0],
-                              "chapterList":
-                              [
-                                {
-                                  "isEnabled":true,
-                                  "childOrderingArray":[],
-                                  "_id":"5ae7e3efbd32e6000442c24c",
-                                  "name":"Electric Field",
-                                  "mappedChapterId":"5ae7e3efbd32e6000442c24b"
-                                }
-                              ],
-                              "_id":"5ae7e3d2bd32e6000442c249",
-                              "name":"Physics"
-                            }
-                          ],
-                        "_id":"5ae7e3c6bd32e6000442c247",
-                        "name":"Science"
-                      },
-                      {
-                         "isEnabled":true,
-                         "childOrderingArray":[],
-                         "subSubjectList":[],
-                         "_id":"5ae802c8c9dd2b0004bfe691",
-                         "name":"Social Study"
-                      }
-                    ],
-                "_id":"5ae7e3bfbd32e6000442c245",
-                "name":"Grade 12"
-             },
-            {
-                "isEnabled":true,
-                "childOrderingArray":[0],
-                "subjectList":
-                  [
-                    {
-                      "isEnabled":true,
-                      "childOrderingArray":[0,1],
-                      "subSubjectList":
-                          [
-                            {
-                               "isEnabled":true,
-                               "childOrderingArray":[],
-                               "chapterList":[],
-                               "_id":"5ae80d74c9f010000405b86f",
-                               "name":"History"
-                            },
-                            {
-                              "isEnabled":true,
-                              "childOrderingArray":[0],
-                              "chapterList":
-                              [
-                                {
-                                   "isEnabled":true,
-                                    "childOrderingArray":[],
-                                    "_id":"5ae999c378d1ad0004cc3446",
-                                    "name":"Development",
-                                    "mappedChapterId":"5ae999c378d1ad0004cc3445"
-                                }
-                              ],
-                                "_id":"5ae9993178d1ad0004cc3443",
-                                  "name":"Economics"
-                              }
-                          ],
-                      "_id":"5ae80d5cc9f010000405b86d",
-                        "name":"Social Studies"
-                    }
-                  ],
-                    "_id":"5ae80242c9dd2b0004bfe681",
-                    "name":"Grade 10"
-                },
-                {
-                  "isEnabled":true,
-                  "childOrderingArray":[0],
-                  "subjectList":
-                      [
-                        {
-                          "isEnabled":true,
-                          "childOrderingArray":[0,1],
-                          "subSubjectList":
-                             [
-                                {
-                                  "isEnabled":true,
-                                  "childOrderingArray":[0,1],
-                                  "chapterList":
-                                  [
-                                    {
-                                       "isEnabled":true,
-                                       "childOrderingArray":[],
-                                       "_id":"5ae80eb6c9f010000405b87f",
-                                       "name":"French Revolution",
-                                       "mappedChapterId":"5ae80eb6c9f010000405b87e"
-                                    },
-                                    {
-                                       "isEnabled":true,
-                                       "childOrderingArray":[],
-                                       "_id":"5ae9927778d1ad0004cc3441",
-                                       "name":"What is democracy ? Why democracy ?",
-                                       "mappedChapterId":"5ae9927778d1ad0004cc3440"
-                                    }
-                                  ],
-                                  "_id":"5ae80ea6c9f010000405b87c",
-                                  "name":"History"
-                              },
-                              {
-                                "isEnabled":true,
-                                "childOrderingArray":[0],
-                                "chapterList":
-                                    [
-                                      {
-                                          "isEnabled":true,
-                                          "childOrderingArray":[],
-                                          "_id":"5ae82bf39a089f0004ce20fd",
-                                          "name":"The Story of Village Palampur",
-                                          "mappedChapterId":"5ae82bf39a089f0004ce20fc"
-                                      }
-                                    ],
-                                "_id":"5ae82bd89a089f0004ce20fa",
-                                 "name":"Economics"
-                              }
-                             ],
-                          "_id":"5ae80e98c9f010000405b87a",
-                            "name":"Social Studies"
-                        }
-                      ],
-                  "_id":"5ae802c7c9dd2b0004bfe68f",
-                   "name":"Grade 9"
-               }
-           ],
-    "_id":"5ae7e37bbd32e6000442c241",
-    "__v":31
-    }
-}
-
-var grade=null;
-var sub=null;
-var subsub=null;
-
-
-function load()
-{
-  data['data'].list.map(function(val)
-  {
-      
-      var g=val.name;
-      var add='<option value="'+g+'">'+g+'</option>';
-      $('.grade').append(add);
-  });
-}
-
-function setsubs(grade)
-{
-  
-     $('.sub').html('');
-     $('.sub').append('<option value="no">SUBJECTS</option>');
-  data['data'].list.map(function(val)
-   {
-      if(val.name==grade)
-      {
-       
-        val.subjectList.map(function(v)
-        {
-            var s=v.name;
-            
-            var add='<option value="'+s+'">'+s+'</option>';
-            $('.sub').append(add);
-        });
-      }
-   });
-}
-
-function subsubs(subject)
-{
-  $('.side').html('');
-  $('.side').append(' <h1><b>LOGO</b></h1>  <h4><b>CONTENTS</b></h4>');
-  var e=document.getElementsByClassName('grade')[0];
-  var gra=e.options[e.selectedIndex].value;
-  grade=gra;
-  sub=subject;
-   data.data.list.map(function(val)
-   {
-      if(val.name==gra)
-      {
-      val.subjectList.map(function(va){
-          if(va.name==subject)
-          {
-             va.subSubjectList.map(function(v)
-             {
-                var s='<p ><b class="subsub" >'+v.name+'</b></p>';
-                subsub=v.name;
-                $('.side').append(s);
-                $('.side').append('<div ><ul id="'+v.name+'" class="chapter"></ul></div>');
-                $('.subsub').on('click',{subsub:v.name},expand);
-             });
-          }
-      });
-    }
-   });
-}
-function expand(event)
-{
-    console.log(grade);
-    console.log(sub);
-    console.log(subsub);
-    event.stopPropagation();
-    event.stopImmediatePropagation();
-    q=event.data.subsub;
-    data.data.list.map(function(val)
-   {
-      if(val.name==grade)
-      {
-      val.subjectList.map(function(va){
-          if(va.name==sub)
-          {
-             va.subSubjectList.map(function(v)
-             {
-                if(v.name==q)
-                {
-                    if(v.chapterList.length==0)
-                    {
-                       $('#'+q).prepend('<p class="no">No Chapters Found!</p>');
-                    }
-                    v.chapterList.map(function(c){
-                        $('#'+q).append('<li>'+c.name+'</li>');
-                    });
-                }
-             });
-          }
-      });
-    }
-   });
-    
-}
-load();
-
-
-
-
-
-</script>
+<script src="index.js"></script>
 </body>
 </html>

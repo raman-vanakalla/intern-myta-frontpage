@@ -1,0 +1,116 @@
+
+    :root
+    {
+      --left-bg-color:#1B3B50;
+      --top-bg-color:#173446;
+      --button-color:#CFCCC8;
+      --text-color:white;
+      --button-hover-color:#2074A0;
+    }
+    .side
+    {
+      z-index: 1;
+      background-color:var(--left-bg-color);
+      height: 600px;
+    }
+    .main
+    {
+      background-color:var(--top-bg-color);
+    }
+    .top
+    {
+      height: 100px;  
+    }
+    .button
+    {
+      height:30px;
+      width: 16.38%;
+      background:var(--button-color);
+      display:inline-block;
+      font-size:12.5px;
+      color: #2074A0;
+      text-decoration:none;
+    }
+    .button:hover
+    {  
+      background-color: var(--button-hover-color);
+      color: var(--text-color);
+    }
+    .parallelogram
+    {
+      transform: skew(40deg);
+    }
+    .skew-fix
+    {
+      display:inline-block;
+      transform: skew(-40deg);
+
+      padding: 7.5px 0px 0px 50px;
+    }
+    nav
+    {
+      position: relative;
+      left: -25px;
+      margin-right: 0px;
+    }
+    .drop
+    {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      border: none;
+      background-color:var(--top-bg-color);
+      color: var(--text-color);
+      margin:40px 0px 40px 100px;
+    }
+    body
+    {
+      width: 1520px;
+    }
+    h1
+    {
+      color: var(--text-color);
+      margin:100px 0px 100px 0px;
+      text-align: center;
+    }
+    h4
+    {
+      color: var(--text-color);
+      text-align: center;
+    }
+    p
+    {
+      margin-left: 50px;
+      color: var(--text-color);
+    }
+    .chapter
+    {
+       color: var(--text-color);
+       margin-left: 40px;
+    }
+    .no
+    {
+      margin-left: -20px;
+    }
+ 
+
+
+   .navbar
+   {
+     background-color: var(--left-bg-color);
+     border: transparent;
+   }
+   .nav>li>a
+   {
+     padding: 5px 0px 0px 0px;
+     color: var(--text-color);
+   }
+   .nav
+   {
+     margin: 0px 0px 0px 20px;
+   }
+
+   .nav>li>a:hover
+   {
+     background-color: var(--left-bg-color);
+     text-decoration: underline; 
+   }

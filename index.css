@@ -91,7 +91,16 @@
     {
       margin-left: -20px;
     }
- 
+
+
+
+   @media screen and (max-width: 768px)
+   {
+     .navbar
+     {
+        height: 200px;
+     }
+   } 
 
 
    .navbar
@@ -107,6 +116,7 @@
    .nav
    {
      margin: 0px 0px 0px 20px;
+
    }
 
    .nav>li>a:hover

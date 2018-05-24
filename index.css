@@ -7,29 +7,54 @@
       --text-color:white;
       --button-hover-color:#2074A0;
     }
+    .col-lg-9 
+    {
+       padding: 0px 0px 0px 0px;
+    }
+    .col-xs-12
+    {
+       padding: 0px 0px 0px 0px;
+    }
+    .col-lg-2
+    {
+      margin: 0px 0px 0px 0px;
+    }
     .side
     {
       z-index: 1;
+      padding: 0px 0px 0px 0px;
       background-color:var(--left-bg-color);
-      height: 600px;
     }
     .main
     {
+      margin-bottom: 0px;
       background-color:var(--top-bg-color);
     }
     .top
     {
-      height: 100px;  
+      height: 10%;  
+      padding: 0px 0px 0px 0px;
+      
+    }
+    #menu
+    {
+     margin-top: 0px;
+      position: relative;
+      top: 0px;
+      left: -25px;
+      margin-right: 0px;
     }
     .button
     {
+      float: left;
       height:30px;
-      width: 16.38%;
+      width: 16.43%;
       background:var(--button-color);
       display:inline-block;
       font-size:12.5px;
       color: #2074A0;
       text-decoration:none;
+      margin-right: 2px;
     }
     .button:hover
     {  
@@ -39,20 +64,20 @@
     .parallelogram
     {
       transform: skew(40deg);
+      height: 20px;
     }
     .skew-fix
     {
       display:inline-block;
       transform: skew(-40deg);
-
-      padding: 7.5px 0px 0px 50px;
+      font-size: 12px;
+      
     }
-    nav
+    span
     {
-      position: relative;
-      left: -25px;
-      margin-right: 0px;
+      text-align: center;
     }
+
     .drop
     {
       font-family: 'Montserrat', sans-serif;
@@ -60,12 +85,9 @@
       border: none;
       background-color:var(--top-bg-color);
       color: var(--text-color);
-      margin:40px 0px 40px 100px;
+      margin:40px 0px 40px 0px;
     }
-    body
-    {
-      width: 100%;
-    }
+   
     h1
     {
       color: var(--text-color);
@@ -89,16 +111,42 @@
     }
     .no
     {
-      margin-left: -20px;
+      margin-left: 0px;
     }
 
 
 
-   
+   @media screen and  (max-width: 768px)
+   {
+     .skew-fix
+     {
+       padding: 0px 0px 0px 10px;
+     }
+     .del
+     {
+       display: none;
+     }
+     .side
+     {
+       height: 100%;
+     }
+   }
+   @media screen and (min-width: 1200px)
+   {
+     .skew-fix
+     {
+       padding: 0px 0px 0px 50px;
+     }
+     .side
+     {
+       height: 700px;
+     }
+   }
 
 
    .navbar
    {
+     margin-right: 0px;
      background-color: var(--left-bg-color);
      border: transparent;
    }

@@ -27,12 +27,14 @@
     }
     .main
     {
+      float: right;
       margin-bottom: 0px;
       background-color:var(--top-bg-color);
+
     }
     .top
     {
-      height: 10%;  
+      height: 100%;  
       padding: 0px 0px 0px 0px;
       
     }
@@ -85,7 +87,8 @@
       border: none;
       background-color:var(--top-bg-color);
       color: var(--text-color);
-      margin:40px 0px 40px 0px;
+      float: right;
+
     }
    
     h1
@@ -130,6 +133,11 @@
      {
        height: 100%;
      }
+     .drop
+     {
+       margin: 10px 0px 10px 0px;
+       font-size: 12px;
+     }
    }
    @media screen and (min-width: 1200px)
    {
@@ -140,6 +148,10 @@
      .side
      {
        height: 700px;
+     }
+     .drop
+     {
+        margin:40px 0px 40px 0px;
      }
    }
 

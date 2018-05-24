@@ -190,8 +190,11 @@ function setsubs(grade)
 //it updates the subsubjects in navigation bar on clicking the the subject
 function subsubs(subject)
 {
-  $('.side').html('');
-  $('.side').append(' <h1><b>LOGO</b></h1>  <h4><b>CONTENTS</b></h4>');
+  if(window.innerWidth>768)
+  {
+    alert("amnna");
+  }
+
   var e=document.getElementsByClassName('grade')[0];
   var gra=e.options[e.selectedIndex].value;
   grade=gra;
@@ -205,11 +208,13 @@ function subsubs(subject)
           {
              va.subSubjectList.map(function(v)
              {
-                var s='<p ><b class="subsub" >'+v.name+'</b></p>';
+                var s='<li ><a href="#" class="active">'+v.name+'</a></li>';
+               // var s='<p ><b class="subsub" >'+v.name+'</b></p>';
                 subsub=v.name;
-                $('.side').append(s);
-                $('.side').append('<div ><ul id="'+v.name+'" class="chapter"></ul></div>');
-                $('.subsub').on('click',{subsub:v.name},expand);
+                $('#navi').html('');
+                $('#navi').append(s);
+               // $('.side').append('<div ><ul id="'+v.name+'" class="chapter"></ul></div>');
+               // $('.subsub').on('click',{subsub:v.name},expand);
              });
           }
       });
@@ -217,7 +222,7 @@ function subsubs(subject)
    });
 }
 
-//this updates the chapters pertaining to the grade ,subject,and subsubject
+//this updates the chapters pertaining to the grade ,subject,and subs
 function expand(event)
 {
     console.log(grade);

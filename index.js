@@ -199,6 +199,7 @@ function subsubs(subject)
   var gra=e.options[e.selectedIndex].value;
   grade=gra;
   sub=subject;
+  $('#navi').html('');
    data.data.list.map(function(val)
    {
       if(val.name==gra)
@@ -211,7 +212,7 @@ function subsubs(subject)
                 var s='<li ><a href="#" class="active">'+v.name+'</a></li>';
                // var s='<p ><b class="subsub" >'+v.name+'</b></p>';
                 subsub=v.name;
-                $('#navi').html('');
+                
                 $('#navi').append(s);
                // $('.side').append('<div ><ul id="'+v.name+'" class="chapter"></ul></div>');
                // $('.subsub').on('click',{subsub:v.name},expand);

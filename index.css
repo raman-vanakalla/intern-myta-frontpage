@@ -116,7 +116,7 @@
     .no
     {
       margin-left: 0px;
-    }f
+    }
 
 
    @media screen and  (max-width: 768px)
@@ -155,7 +155,7 @@
      }
      .del1
      {
-       display: none;
+        display: none;
      }
    }
 

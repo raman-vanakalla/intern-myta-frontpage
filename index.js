@@ -209,13 +209,14 @@ function subsubs(subject)
           {
              va.subSubjectList.map(function(v)
              {
-                var s='<a class="dropdown-toggle subsub" data-toggle="dropdown" >'+v.name+'<span class="caret"></span></a>';
+                subsub=v.name;
+                var s='<li class="dropdown"><a class="dropdown-toggle subsub" data-toggle="dropdown" >'+v.name+'<span class="caret"></span></a><ul class="dropdown-menu" id="'+v.name+'"></ul></li>';
                // var s='<li ><a  >'+v.name+'</a></li>';
                // var s='<p ><b class="subsub" >'+v.name+'</b></p>';
-                subsub=v.name;
+                
                 
                 $('#navi').append(s);
-                $('#navi').append('<ul class="dropdown-menu" id="'+v.name+'"></ul>');
+        
                 v.chapterList.map(function(c)
                 {
                     console.log(c);
@@ -252,7 +253,8 @@ function expand(event)
 
                     if(v.chapterList.length==0)
                     {
-                       $('#'+q).prepend('<p class="no">No Chapters Found!</p>');
+                       alert("helloo");
+                       $('#'+q).append('<p class="no">No Chapters Found!</p>');
                     }
                     v.chapterList.map(function(c){
                       console.log(c);

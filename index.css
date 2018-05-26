@@ -91,7 +91,10 @@
       margin-right:10px;
 
     }
-   
+    .active
+    {
+      background-color: transparent;
+    }
     h1
     {
       color: var(--text-color);

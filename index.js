@@ -209,13 +209,19 @@ function subsubs(subject)
           {
              va.subSubjectList.map(function(v)
              {
-                var s='<li ><a href="#" class="active">'+v.name+'</a></li>';
+                var s='<a class="dropdown-toggle subsub" data-toggle="dropdown" >'+v.name+'<span class="caret"></span></a>';
+               // var s='<li ><a  >'+v.name+'</a></li>';
                // var s='<p ><b class="subsub" >'+v.name+'</b></p>';
                 subsub=v.name;
                 
                 $('#navi').append(s);
-               // $('.side').append('<div ><ul id="'+v.name+'" class="chapter"></ul></div>');
-               // $('.subsub').on('click',{subsub:v.name},expand);
+                $('#navi').append('<ul class="dropdown-menu" id="'+v.name+'"></ul>');
+                v.chapterList.map(function(c)
+                {
+                    console.log(c);
+                    $('#'+v.name).append('<li><a >'+c.name+'</a></li>');
+                });
+                //$('.subsub').on('click',{subsub:v.name},expand);
              });
           }
       });
@@ -243,12 +249,14 @@ function expand(event)
              {
                 if(v.name==q)
                 {
+
                     if(v.chapterList.length==0)
                     {
                        $('#'+q).prepend('<p class="no">No Chapters Found!</p>');
                     }
                     v.chapterList.map(function(c){
-                        $('#'+q).append('<li>'+c.name+'</li>');
+                      console.log(c);
+                        $('#'+q).append('<li><a >'+c.name+'</a></li>');
                     });
                 }
              });

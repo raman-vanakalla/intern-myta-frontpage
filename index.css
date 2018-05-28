@@ -91,10 +91,7 @@
       margin-right:10px;
 
     }
-    .active
-    {
-      background-color: transparent;
-    }
+
     h1
     {
       color: var(--text-color);
@@ -115,6 +112,10 @@
     {
        color: var(--text-color);
        margin-left: 40px;
+    }
+    .chapter>li>a
+    {
+        color: var(--text-color);
     }
     .no
     {
@@ -137,17 +138,30 @@
        color: var(--text-color);
        
     }
-    
-
+    .navbar-header
+    {
+       margin: 0px 0px 0px 0px;
+    }
+    .row
+    {
+       width: 100%;
+       margin: 0px 0px 0px 0px;
+    }
+    .navbar-toggle
+    {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-right: 0px;
+    }
    @media screen and  (max-width: 768px)
    {
-     .skew-fix
-     {
-       padding: 0px 0px 0px 10px;
-     }
      .del
      {
        display: none;
+     }
+     .skew-fix
+     {
+       padding: 0px 0px 0px 10px;
      }
      .side
      {
@@ -196,6 +210,10 @@
      margin-right: 0px;
      background-color: var(--left-bg-color);
      border: transparent;
+   }
+   .navbar-brand
+   {
+     padding:15px 0px 15px 0px;
    }
    .nav>li>a
    {

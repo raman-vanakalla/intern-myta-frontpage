@@ -190,16 +190,22 @@ function setsubs(grade)
 //it updates the subsubjects in navigation bar on clicking the the subject
 function subsubs(subject)
 {
-  if(window.innerWidth>768)
+  if(window.innerWidth>1024)
   {
-    alert("amnna");
+      $('.side').html('');
+      $('.side').append(' <h1><b>LOGO</b></h1>  <h4><b>CONTENTS</b></h4>');
+  }
+  else if(window.innerWidth<768)
+  {
+      $('#navi').html('');
   }
 
   var e=document.getElementsByClassName('grade')[0];
   var gra=e.options[e.selectedIndex].value;
   grade=gra;
   sub=subject;
-  $('#navi').html('');
+ 
+  
    data.data.list.map(function(val)
    {
       if(val.name==gra)
@@ -210,19 +216,24 @@ function subsubs(subject)
              va.subSubjectList.map(function(v)
              {
                 subsub=v.name;
-                var s='<li class="dropdown"><a class="dropdown-toggle subsub" data-toggle="dropdown" >'+v.name+'<span class="caret"></span></a><ul class="dropdown-menu" id="'+v.name+'"></ul></li>';
-               // var s='<li ><a  >'+v.name+'</a></li>';
-               // var s='<p ><b class="subsub" >'+v.name+'</b></p>';
-                
-                
-                $('#navi').append(s);
-        
-                v.chapterList.map(function(c)
+                if(window.innerWidth<768)
                 {
-                    console.log(c);
-                    $('#'+v.name).append('<li><a >'+c.name+'</a></li>');
-                });
-                //$('.subsub').on('click',{subsub:v.name},expand);
+                    var s='<li class="dropdown"><a class="dropdown-toggle subsub" data-toggle="dropdown" >'+v.name+'<span class="caret"></span></a><ul class="dropdown-menu" id="'+v.name+'"></ul></li>';
+                    $('#navi').append(s);
+                    v.chapterList.map(function(c)
+                    {
+                       console.log(c);
+                       $('#'+v.name).append('<li><a >'+c.name+'</a></li>');
+                    });
+                }
+                else if(window.innerWidth>1024)
+                {
+                    var s='<p ><b class="subsub" >'+v.name+'</b></p>';
+                    subsub=v.name;
+                    $('.side').append(s);
+                    $('.side').append('<div ><ul id="'+v.name+'" class="chapter"></ul></div>');
+                    $('.subsub').on('click',{subsub:v.name},expand);
+                }
              });
           }
       });
@@ -253,7 +264,6 @@ function expand(event)
 
                     if(v.chapterList.length==0)
                     {
-                       alert("helloo");
                        $('#'+q).append('<p class="no">No Chapters Found!</p>');
                     }
                     v.chapterList.map(function(c){

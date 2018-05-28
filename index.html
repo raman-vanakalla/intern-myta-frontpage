@@ -16,36 +16,37 @@
 
 </head>
 <body >
-    
+
     <div class="row">
-    	<div class="col-lg-3 col-xs-12 side">
-       <h1 class="del" ><b>MYTA</b></h1> 
-       <h4 class="del"><b>CONTENTS</b></h4>
-       <nav class="navbar navbar-inverse del1">
-         <div class="container-fluid">
-           <div class="navbar-header">
-             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>                        
-             </button>
-            <a class="navbar-brand del1" href="#" style="color:var(--text-color);font-size: 20px;">MYTA</a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav" id="navi">
-             <li ><a href="#">Select the subject</a></li>      
-            </ul>
-          </div>
-         </div>
-      </nav>
-      </div>
+      <!--navigation bar -->
+    	  <div class="col-lg-3 col-xs-12 side">
+           <h1 class="del" ><b>MYTA</b></h1> 
+           <h4 class="del"><b>CONTENTS</b></h4>
+             <nav class="navbar navbar-inverse del1">
+               <div class="container-fluid">
+                 <div class="navbar-header">
+                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>                        
+                   </button>
+                   <a class="navbar-brand del1" href="#" style="color:var(--text-color);font-size: 20px;">MYTA</a>
+                 </div>
+                 <div class="collapse navbar-collapse" id="myNavbar">
+                   <ul class="nav navbar-nav" id="navi">
+                     <li >
+                        <a href="#">Select the subject</a>
+                     </li>      
+                   </ul>
+                 </div>
+              </div>
+           </nav>
+        </div>
 
-
+<!--dropdowns for grade and subjects  -->
 
     	<div class="col-lg-9 col-xs-12">
           <div class="main col-xs-12 col-lg-12">
-  
-            
               <select class="drop sub" onchange="subsubs(options[this.selectedIndex].value)" >
                  <option value="no">SUBJECTS</option>
                </select>
@@ -53,12 +54,9 @@
                <select class="drop grade" onchange="setsubs(options[this.selectedIndex].value)" >
                  <option value="select" >SELECT GRADE</option>
                </select>
-            
-            
-              
-
     	  	</div>
 
+         <!-- menu bar for desktop view -->
     		  <div id="menu" class="col-lg-12" >
               <a class="button parallelogram" href="#">
                   <span class="skew-fix"><b>NOTES</b></span>
@@ -79,13 +77,12 @@
                   <span class="skew-fix"><b>NCERT </b></span>
               </a>
           </div>
+          <!--menu bar for mobile-->
           <div class="col-xs-12" id="mobmenu">
             <div class="col-xs-6 menubox">
               <div class="col-xs-12 heading">
                 <b>NOTES</b>
-              </div>
-            </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
-              
+              </div>              
             </div>
             <div class="col-xs-6 menubox">
               <div class="col-xs-12 heading">

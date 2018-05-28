@@ -162,7 +162,7 @@
       padding-right: 0px;
       margin-right: 0px;
     }
-    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a 
     {
        color: var(--text-color);
     }

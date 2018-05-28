@@ -132,11 +132,20 @@
        padding: 0px 0px 0px 0px;
        overflow: auto;
     }
+    #navi>li>a
+    {
+       color: var(--text-color);
+    }
+    .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover
+    {
+       background-color: transparent;
+
+    }
     .heading
     {
        background-color: var(--button-hover-color);
        color: var(--text-color);
-       
+      
     }
     .navbar-header
     {
@@ -152,6 +161,10 @@
       padding-left: 0px;
       padding-right: 0px;
       margin-right: 0px;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a
+    {
+       color: var(--text-color);
     }
    @media screen and  (max-width: 768px)
    {

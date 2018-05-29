@@ -130,6 +130,7 @@
     {
        border-radius: 0px;
        background:var(--button-color);
+       color: #2074A0;
        border: 0.5px 0.5px 0.5px 0.5px;
     }
     .menubutton:hover

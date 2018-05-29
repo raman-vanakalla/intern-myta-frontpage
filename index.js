@@ -151,6 +151,14 @@ var data=  {
     }
 }
 
+
+$('.menubutton').on('click',function(event){openmenu(event);});
+
+function openmenu(event)
+{
+   alert(event.target.classList.contain('select'));
+}
+
 var grade=null;
 var sub=null;
 var subsub=null;

@@ -126,6 +126,17 @@
     {
        display: none;
     }
+    .menubutton
+    {
+       border-radius: 0px;
+       background:var(--button-color);
+       border: 0.5px 0.5px 0.5px 0.5px;
+    }
+    .menubutton:hover
+    {
+       background-color: var(--button-hover-color);
+       color: var(--text-color);
+    }
     .menubox
     {
        

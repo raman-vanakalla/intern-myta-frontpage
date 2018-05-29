@@ -110,6 +110,7 @@
     }
     .chapter
     {
+       display: none;
        color: var(--text-color);
        margin-left: 40px;
     }

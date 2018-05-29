@@ -219,9 +219,10 @@ function subsubs(subject)
                 subsub=v.name;
                 if(window.innerWidth<=768)
                 {
-                    var s='<a href="#">'+v.name+'</a>';
+                    var s='<a class="chap">'+v.name+'</a>';
                     $('#mySidenav').append(s);
                     $('#mySidenav').append('<div ><ul id="'+v.name+'" class="chapter"></ul></div>');
+                    $('.chap').on('click',{subsub:v.name},showit);
                     v.chapterList.map(function(c)
                     {
                        console.log(c);
@@ -241,6 +242,19 @@ function subsubs(subject)
       });
     }
    });
+}
+
+function showit(event)
+{
+   var s=event.data.subsub;
+  if($('#'+s).css("display")=='none')
+  {
+     $('#'+s).css("display","block");
+  }
+  else
+  {
+     $('#'+s).css("display","none");
+  }
 }
 
 //this updates the chapters pertaining to the grade ,subject,and subs

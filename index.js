@@ -246,6 +246,8 @@ function subsubs(subject)
 
 function showit(event)
 {
+  event.stopPropagation();
+    event.stopImmediatePropagation();
    var s=event.data.subsub;
   if($('#'+s).css("display")=='none')
   {

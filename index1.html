@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MYTA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+<body >
+
+    <div class="row">
+      <!--navigation bar -->
+    	  <div class="col-lg-3 col-xs-12 side">
+           <h1 class="del" ><b>MYTA</b></h1> 
+           <h4 class="del"><b>CONTENTS</b></h4>
+           <span style="font-size:30px;cursor:pointer;color: white" onclick="openNav()">&#9776; MYTA</span>
+             <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+<!--dropdowns for grade and subjects  -->
+
+    	<div class="col-lg-9 col-xs-12">
+          <div class="main col-xs-12 col-lg-12">
+              <select class="drop sub" onchange="subsubs(options[this.selectedIndex].value)" >
+                 <option value="no">SUBJECTS</option>
+               </select>
+
+               <select class="drop grade" onchange="setsubs(options[this.selectedIndex].value)" >
+                 <option value="select" >SELECT GRADE</option>
+               </select>
+    	  	</div>
+
+         <!-- menu bar for desktop view -->
+    		  <div id="menu" class="col-lg-12" >
+              <a class="button parallelogram" href="#">
+                  <span class="skew-fix"><b>NOTES</b></span>
+              </a>
+              <a class="button parallelogram" href="#">
+                  <span class="skew-fix"><b>LAQ</b></span>
+              </a>
+              <a class="button parallelogram" href="#">
+                  <span class="skew-fix"><b>SAQ</b></span>
+              </a>
+              <a class="button parallelogram" href="#">
+                  <span class="skew-fix"><b>VSAQ</b></span>
+              </a>
+              <a class="button parallelogram" href="#">
+                  <span class="skew-fix"><b>VBQ</b></span>
+              </a>
+              <a class="button parallelogram" href="#">
+                  <span class="skew-fix"><b>NCERT </b></span>
+              </a>
+          </div>
+          <!--menu bar for mobile-->
+          <div class="col-xs-12" id="mobmenu">
+            <div class="col-xs-6 menubox">
+              <div class="col-xs-12 heading">
+                <b>NOTES</b>
+              </div>              
+            </div>
+            <div class="col-xs-6 menubox">
+              <div class="col-xs-12 heading">
+                <b>LAQS</b>
+              </div>
+            </div>
+            <div class="col-xs-6 menubox">
+              <div class="col-xs-12 heading">
+                <b>SAQS</b>
+              </div>
+            </div>
+            <div class="col-xs-6 menubox">
+              <div class="col-xs-12 heading">
+                <b>VSAQS</b>
+              </div>
+            </div>
+            <div class="col-xs-6 menubox">
+              <div class="col-xs-12 heading">
+                <b>VBQS</b>
+              </div>
+            </div>
+            <div class="col-xs-6 menubox">
+              <div class="col-xs-12 heading">
+                <b>NCERT</b>
+              </div>
+            </div>
+          </div>
+    	</div>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>

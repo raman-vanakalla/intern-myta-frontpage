@@ -213,20 +213,22 @@ function subsubs(subject)
       val.subjectList.map(function(va){
           if(va.name==subject)
           {
+             $('#sel').html("");
              va.subSubjectList.map(function(v)
              {
                 subsub=v.name;
-                if(window.innerWidth<768)
+                if(window.innerWidth<=768)
                 {
-                    var s='<li class="dropdown"><a class="dropdown-toggle subsub" data-toggle="dropdown" >'+v.name+'<span class="caret"></span></a><ul class="dropdown-menu" id="'+v.name+'"></ul></li>';
-                    $('#navi').append(s);
+                    var s='<a href="#">'+v.name+'</a>';
+                    $('#mySidenav').append(s);
+                    $('#mySidenav').append('<div ><ul id="'+v.name+'" class="chapter"></ul></div>');
                     v.chapterList.map(function(c)
                     {
                        console.log(c);
                        $('#'+v.name).append('<li><a >'+c.name+'</a></li>');
                     });
                 }
-                else if(window.innerWidth>1024)
+                else if(window.innerWidth>=1024)
                 {
                     var s='<p ><b class="subsub" >'+v.name+'</b></p>';
                     subsub=v.name;

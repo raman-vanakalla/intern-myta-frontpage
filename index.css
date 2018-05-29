@@ -181,6 +181,11 @@
     }
    @media screen and  (max-width: 769px)
    {
+     .main
+     {
+       margin-top: 40px;
+     
+     }
      .del
      {
        display: none;
@@ -191,7 +196,10 @@
      }
      .side
      {
+       position: fixed;
        height:40px;
+       display: block;
+       margin-bottom:40px;
      }
      .drop
      {

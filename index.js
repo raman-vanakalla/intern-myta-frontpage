@@ -243,7 +243,12 @@ function subsubs(subject)
                     subsub=v.name;
                     $('.side').append(s);
                     $('.side').append('<div ><ul id="'+v.name+'" class="chapter"></ul></div>');
-                    $('.subsub').on('click',{subsub:v.name},expand);
+                    v.chapterList.map(function(c)
+                    {
+                       console.log(c);
+                       $('#'+v.name).append('<li><a >'+c.name+'</a></li>');
+                    });
+                    $('.subsub').on('click',{subsub:v.name},showit);
                 }
              });
           }
